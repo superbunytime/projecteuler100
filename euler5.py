@@ -11,23 +11,26 @@ def productList(list):
 
         value = value * x
     return value
+    """returns all items in an array multiplied together"""
     
-print(productList(yourList))
+# print(productList(yourList))
 
 def divideList(list):
-    num = productList(list) #big number
-    i = 2 # no point to start from 1
-    for x in list: #iterate over the list
-        while num % x == 0:
-          if num % x != 0: # that's where the error was; i was doing if num % i instead of x; now loop it.
-            return("not mod")
-        i += 1
-        return num / i
+    num = productList(yourList)
+    print(num)
+    i = 2
+    while i < 61:
+        for x in list:
+            if num % x != 0:
+                print("one step too far") #this shouldn't be getting reached but it is.
+        num /= i
+    i += 1
+
 
 print(divideList(yourList))
 
 #shit don't work
-    
+
 
 #so that won't give you the result you want. it will give you something multiplicative of that result though.
 
